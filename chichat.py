@@ -1,6 +1,6 @@
 import openai
-from secret_key import Openai_key
-openai.api_key = Openai_key
+from dotenv import load_dotenv
+load_dotenv()
 response = openai.ChatCompletion.create(
   model="gpt-3.5-turbo",
   messages=[
